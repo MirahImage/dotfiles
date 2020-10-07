@@ -44,6 +44,14 @@ endif
 git:
 	ln -f $(ROOT_DIR)/gitconfig $(HOME)/.gitconfig
 	ln -f $(ROOT_DIR)/gitignore_global $(HOME)/.gitignore_global
+	if [ ! -d $(HOME)/workspace ]; then mkdir -p $(HOME)/workspace; fi
+	if [ ! -d $(HOME)/workspace/git-hooks-core ]; then \
+		git clone git@github.com:pivotal-cf/git-hooks-core.git $(HOME)/workspace/git-hooks-core; fi
+	cd $(HOME)/workspace/git-hooks-core && git pull
+ifneq ($(shell which cred-alert-cli), /usr/local/bin/cred-alert-cli)
+	curl -f https://s3.amazonaws.com/cred-alert/cli/current-release/cred-alert-cli_darwin > /usr/local/bin/cred-alert-cli && chmod +x /usr/local/bin/cred-alert-cli
+endif
+	cred-alert-cli update
 
 .PHONY: tmux
 ## Configures tmux
