@@ -49,6 +49,13 @@ configure-git:
 ## Configures tmux
 configure-tmux:
 	ln -f $(ROOT_DIR)/tmux.conf $(HOME)/.tmux.conf
+	if [ ! -d $(HOME)/.tmux/plugins/tpm ]; then \
+		mkdir -p $(HOME)/.tmux/plugins && \
+		git clone https://github.com/tmux-plugins/tpm $(HOME)/.tmux/plugins/tpm && \
+		$(HOME)/.tmux/plugins/tpm/bin/install_plugins all; else \
+		cd $(HOME)/.tmux/plugins/tpm && \
+		git pull && \
+		$(HOME)/.tmux/plugins/tpm/bin/update_plugins all; fi
 
 .PHONY: smith-token-hook
 ## Add smith token hook
