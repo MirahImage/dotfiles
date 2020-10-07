@@ -10,7 +10,7 @@ show-help:
 
 .PHONY: setup
 ## Installs dotfiles
-setup: brew-install setup-zsh configure-git configure-tmux smith go-tools vscode-extensions
+setup: brew-install setup-zsh configure-git configure-tmux smith go-tools vscode-extensions cf-plugins
 
 
 .PHONY: setup-zsh
@@ -84,3 +84,13 @@ vscode-extensions:
 	code --install-extension sonarsource.sonarlint-vscode
 	code --install-extension redhat.vscode-xml
 	code --install-extension gamunu.vscode-yarn
+
+.PHONY: cf-plugins
+## Install cf-cli plugins
+cf-plugins:
+ifneq ($(cf list-plugin-repos | grep CF-Community | wc -l), 1)
+	cf add-plugin-repo CF-Community https://plugins.cloudfoundry.org/
+endif
+	cf install-plugin "Firehose Plugin" -r CF-Community -f
+	cf install-plugin "log-cache" -r CF-Community -f
+	cf install-plugin "log-stream" -r CF-Community -f
