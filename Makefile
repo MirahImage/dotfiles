@@ -16,10 +16,12 @@ setup: brew-install setup-zsh configure-git configure-tmux
 .PHONY: setup-zsh
 ## Installs oh-my-zsh and configures zsh dotfiles
 setup-zsh:
-	# Install oh-my-zsh
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+	# Install oh-my-zsh if not present
+	if [ ! -d "$(HOME)/.oh-my-zsh" ]; then \
+		curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh && \
+		rm $(HOME)/.zshrc; \
+	fi
 	# Update zsh dotfiles
-	rm $(HOME)/.zshrc
 	ln -f $(ROOT_DIR)/zshrc $(HOME)/.zshrc
 	ln -f $(ROOT_DIR)/zshenv $(HOME)/.zshenv
 	# Add custom theme
