@@ -10,7 +10,7 @@ show-help:
 
 .PHONY: setup
 ## Installs dotfiles
-setup: brew-install setup-zsh configure-git configure-tmux
+setup: brew-install setup-zsh configure-git configure-tmux smith-token-hook
 
 
 .PHONY: setup-zsh
