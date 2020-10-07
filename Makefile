@@ -10,7 +10,7 @@ show-help:
 
 .PHONY: setup
 ## Installs dotfiles
-setup: brew-install setup-zsh configure-git configure-tmux smith
+setup: brew-install setup-zsh configure-git configure-tmux smith go-tools
 
 
 .PHONY: setup-zsh
@@ -62,3 +62,9 @@ configure-tmux:
 smith:
 	go get -u github.com/pivotal/smith
 	ln -f $(ROOT_DIR)/smith-token-hook.sh $(HOME)/.smith-token-hook.sh
+
+.PHONY: go-tools
+## Install golang tools
+go-tools:
+	go get -u github.com/onsi/ginkgo/ginkgo \
+		github.com/onsi/gomega
