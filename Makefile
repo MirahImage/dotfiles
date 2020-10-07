@@ -24,15 +24,3 @@ endif
 	ln -f $(ROOT_DIR)/Brewfile $(HOME)/.Brewfile
 	brew bundle --global
 	brew cleanup
-
-.PHONY: format-brewfile
-## Orders the brew file
-format-brewfile:
-	cat $(ROOT_DIR)/Brewfile | sort | uniq | sed '/^[[:space:]]*$$/d' > $(ROOT_DIR)/brew/Brewfile.1
-	mv $(ROOT_DIR)/Brewfile.1 Brewfile
-	grep '^tap' $(ROOT_DIR)/Brewfile > Brewfile.1
-	grep '^brew "mas"' $(ROOT_DIR)/Brewfile >> Brewfile.1
-	grep '^cask' $(ROOT_DIR)/Brewfile >> $(ROOT_DIR)/Brewfile.1
-	grep '^mas' $(ROOT_DIR)/Brewfile >> $(ROOT_DIR)/Brewfile.1
-	grep '^brew' $(ROOT_DIR)/Brewfile >> $(ROOT_DIR)/Brewfile.1
-	mv $(ROOT_DIR)/Brewfile.1 $(ROOT_DIR)/Brewfile
