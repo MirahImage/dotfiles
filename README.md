@@ -7,6 +7,6 @@ This exists primarily for the purposes of backing up my config, especially after
 Clone the repo, then run `make setup`
 ```
 git clone git@github.com:MirahImage/dotfiles.git && \
-    pushd dotfiles && \
+    cd dotfiles && \
     make setup
 ```
