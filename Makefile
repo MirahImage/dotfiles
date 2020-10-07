@@ -10,12 +10,12 @@ show-help:
 
 .PHONY: setup
 ## Installs dotfiles
-setup: brew-install setup-zsh configure-git configure-tmux smith go-tools vscode-extensions cf-plugins
+setup: brew zsh git tmux smith go-tools vscode-extensions cf-plugins luan-vim
 
 
-.PHONY: setup-zsh
+.PHONY: zsh
 ## Installs oh-my-zsh and configures zsh dotfiles
-setup-zsh:
+zsh:
 	# Install oh-my-zsh if not present
 	if [ ! -d "$(HOME)/.oh-my-zsh" ]; then \
 		curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh && \
@@ -27,9 +27,9 @@ setup-zsh:
 	# Add custom theme
 	ln -f $(ROOT_DIR)/custom-refined.zsh-theme $(HOME)/.oh-my-zsh/custom/themes/custom-refined.zsh-theme
 
-.PHONY: brew-install
+.PHONY: brew
 ## Installs homebrew and dependencies in Brewfile
-brew-install:
+brew:
 ifneq ($(shell which brew), /usr/local/bin/brew)
 	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh | bash
 endif
@@ -39,15 +39,15 @@ endif
 	brew bundle --global
 	brew cleanup
 
-.PHONY: configure-git
+.PHONY: git
 ## Configures git dotfiles
-configure-git:
+git:
 	ln -f $(ROOT_DIR)/gitconfig $(HOME)/.gitconfig
 	ln -f $(ROOT_DIR)/gitignore_global $(HOME)/.gitignore_global
 
-.PHONY: configure-tmux
+.PHONY: tmux
 ## Configures tmux
-configure-tmux:
+tmux:
 	ln -f $(ROOT_DIR)/tmux.conf $(HOME)/.tmux.conf
 	if [ ! -d $(HOME)/.tmux/plugins/tpm ]; then \
 		mkdir -p $(HOME)/.tmux/plugins && \
@@ -94,3 +94,8 @@ endif
 	cf install-plugin "Firehose Plugin" -r CF-Community -f
 	cf install-plugin "log-cache" -r CF-Community -f
 	cf install-plugin "log-stream" -r CF-Community -f
+
+.PHONY: luan-vim
+## Install luan-vim
+luan-vim:
+	if [ -d $(HOME)/.vim ]; then vim-update; else curl vimfiles.luan.sh/install | bash; fi
