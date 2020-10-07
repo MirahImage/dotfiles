@@ -4,12 +4,9 @@ This exists primarily for the purposes of backing up my config, especially after
 
 ## Setup
 
-There's a lot to do here, eventually there will be a makefile or a setup script or something along those lines, like
-
+Clone the repo, then run `make setup`
 ```
 git clone git@github.com:MirahImage/dotfiles.git && \
     pushd dotfiles && \
-    make setup-home
+    make setup
 ```
-
-For now, just clone the repo, then `ln` the files to the home directory with a `.` in front. Except the zsh theme, which goes in `.oh-my-zsh/custom/themes/`
