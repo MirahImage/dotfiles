@@ -44,15 +44,15 @@
 	gpgsign = true
 [user]
   name = Mirah Gary
-  email = mgary@vmware.com
+  email = mgary@pivotal.io
 [duet "env"]
 	git-author-initials = mg
 	git-author-name = Mirah Gary
-	git-author-email = mgary@vmware.com
+	git-author-email = mgary@pivotal.io
 	mtime = 1588863543
 	git-committer-initials = mg
 	git-committer-name = Mirah Gary
-	git-committer-email = mgary@vmware.com
+	git-committer-email = mgary@pivotal.io
 [gpg]
   program = /usr/local/bin/gpg
 [credential]
