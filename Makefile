@@ -26,6 +26,10 @@ zsh:
 	ln -f $(ROOT_DIR)/zshenv $(HOME)/.zshenv
 	# Add custom theme
 	ln -f $(ROOT_DIR)/custom-refined.zsh-theme $(HOME)/.oh-my-zsh/custom/themes/custom-refined.zsh-theme
+	# Add zsh-syntax-highlighting plugin
+	if [ ! -d "$(HOME)/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting" ]; then \
+		git clone git@github.com:zsh-users/zsh-syntax-highlighting.git $(HOME)/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting; fi
+	cd $(HOME)/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting && git pull
 
 .PHONY: brew
 ## Installs homebrew and dependencies in Brewfile
