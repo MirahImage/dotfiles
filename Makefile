@@ -10,7 +10,7 @@ show-help:
 
 .PHONY: setup
 ## Installs dotfiles
-setup: brew zsh git tmux smith go-tools vscode-extensions cf-plugins luan-vim
+setup: brew zsh git tmux smith go-tools vscode-extensions cf-plugins luan-vim allow-internet
 
 
 .PHONY: zsh
@@ -99,3 +99,8 @@ endif
 ## Install luan-vim
 luan-vim:
 	if [ -d $(HOME)/.vim ]; then vim-update; else curl vimfiles.luan.sh/install | bash; fi
+
+.PHONY: allow-internet
+## Allow executables from the internet
+allow-internet:
+	sudo spctl --master-disable
