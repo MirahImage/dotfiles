@@ -10,7 +10,7 @@ show-help:
 
 .PHONY: setup
 ## Installs dotfiles
-setup: brew-install setup-zsh configure-git configure-tmux smith go-tools
+setup: brew-install setup-zsh configure-git configure-tmux smith go-tools vscode-extensions
 
 
 .PHONY: setup-zsh
@@ -68,3 +68,19 @@ smith:
 go-tools:
 	go get -u github.com/onsi/ginkgo/ginkgo \
 		github.com/onsi/gomega
+
+.PHONY: vscode-extensions
+## Install vscode extensions
+vscode-extensions:
+	code --install-extension minherz.copyright-inserter
+	code --install-extension ms-azuretools.vscode-docker
+	code --install-extension pgourlain.erlang
+	code --install-extension golang.go
+	code --install-extension hashicorp.terraform
+	code --install-extension johnpapa.vscode-peacock
+	code --install-extension rebornix.ruby
+	code --install-extension castwide.solargraph
+	code --install-extension timonwong.shellcheck
+	code --install-extension sonarsource.sonarlint-vscode
+	code --install-extension redhat.vscode-xml
+	code --install-extension gamunu.vscode-yarn
