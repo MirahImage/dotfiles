@@ -68,8 +68,11 @@ alias gp="git push"
 alias gap="git add -p"
 alias gs="git switch"
 alias gpr="git pull --rebase"
-
 export GIT_DUET_GLOBAL=true
 export GIT_DUET_ROTATE_AUTHOR=1
 
 export LPASS_AGENT_TIMEOUT=28800
+
+# Add zsh completion
+fpath+=("$(brew --prefix)/share/zsh-completions")
+source "$(brew --prefix)/share/zsh/site-functions"
