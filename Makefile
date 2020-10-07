@@ -10,7 +10,7 @@ show-help:
 
 .PHONY: setup
 ## Installs dotfiles
-setup: brew-install setup-zsh configure-git configure-tmux smith-token-hook
+setup: brew-install setup-zsh configure-git configure-tmux smith
 
 
 .PHONY: setup-zsh
@@ -57,7 +57,8 @@ configure-tmux:
 		git pull && \
 		$(HOME)/.tmux/plugins/tpm/bin/update_plugins all; fi
 
-.PHONY: smith-token-hook
-## Add smith token hook
-smith-token-hook:
+.PHONY: smith
+## Add smith and token hook
+smith:
+	go get -u github.com/pivotal/smith
 	ln -f $(ROOT_DIR)/smith-token-hook.sh $(HOME)/.smith-token-hook.sh
