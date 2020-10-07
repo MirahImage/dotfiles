@@ -49,3 +49,8 @@ configure-git:
 ## Configures tmux
 configure-tmux:
 	ln -f $(ROOT_DIR)/tmux.conf $(HOME)/.tmux.conf
+
+.PHONY: smith-token-hook
+## Add smith token hook
+smith-token-hook:
+	ln -f $(ROOT_DIR)/smith-token-hook.sh $(HOME)/.smith-token-hook.sh
