@@ -76,3 +76,5 @@ export LPASS_AGENT_TIMEOUT=28800
 # Add zsh completion
 fpath+=("$(brew --prefix)/share/zsh-completions")
 source "$(brew --prefix)/share/zsh/site-functions"
+
+export PATH=/usr/local/opt/ruby/bin:$PATH
