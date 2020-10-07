@@ -77,4 +77,11 @@ export LPASS_AGENT_TIMEOUT=28800
 fpath+=("$(brew --prefix)/share/zsh-completions")
 source "$(brew --prefix)/share/zsh/site-functions"
 
+# Tweak zsh highlighting colors
+export ZSH_HIGHLIGHT_STYLES[bracket-level-1]='fg=cyan,bold'
+export ZSH_HIGHLIGHT_STYLES[bracket-level-3]='fg=043,bold'
+export ZSH_HIGHLIGHT_STYLES[cursor]='bg=049'
+export ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=133'
+export ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=198'
+
 export PATH=/usr/local/opt/ruby/bin:$PATH
