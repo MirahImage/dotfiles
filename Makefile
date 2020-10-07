@@ -10,8 +10,20 @@ show-help:
 
 .PHONY: setup
 ## Installs dotfiles
-setup:
+setup: brew-install setup-zsh configure-git configure-tmux
 
+
+.PHONY: setup-zsh
+## Installs oh-my-zsh and configures zsh dotfiles
+setup-zsh:
+	# Install oh-my-zsh
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+	# Update zsh dotfiles
+	rm $(HOME)/.zshrc
+	ln -f $(ROOT_DIR)/zshrc $(HOME)/.zshrc
+	ln -f $(ROOT_DIR)/zshenv $(HOME)/.zshenv
+	# Add custom theme
+	ln -f $(ROOT_DIR)/custom-refined.zsh-theme $(HOME)/.oh-my-zsh/custom/themes/custom-refined.zsh-theme
 
 .PHONY: brew-install
 ## Installs homebrew and dependencies in Brewfile
@@ -24,3 +36,14 @@ endif
 	ln -f $(ROOT_DIR)/Brewfile $(HOME)/.Brewfile
 	brew bundle --global
 	brew cleanup
+
+.PHONY: configure-git
+## Configures git dotfiles
+configure-git:
+	ln -f $(ROOT_DIR)/gitconfig $(HOME)/.gitconfig
+	ln -f $(ROOT_DIR)/gitignore_global $(HOME)/.gitignore_global
+
+.PHONY: configure-tmux
+## Configures tmux
+configure-tmux:
+	ln -f $(ROOT_DIR)/tmux.conf $(HOME)/.tmux.conf
