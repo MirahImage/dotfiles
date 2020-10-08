@@ -1,5 +1,7 @@
 # Mirah's Dotfiles
 
+![Image of my terminal](screenshot.png)
+
 This exists primarily for the purposes of backing up my config, especially after I lost all my zsh config once in the middle of customizing it.
 
 ## Setup
