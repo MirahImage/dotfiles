@@ -10,7 +10,7 @@ show-help:
 
 .PHONY: setup
 ## Installs dotfiles
-setup: brew zsh git tmux smith go-tools vscode-extensions cf-plugins luan-vim allow-internet
+setup: brew zsh git tmux smith go-tools vscode-extensions cf-plugins luan-vim repos allow-internet
 
 
 .PHONY: zsh
@@ -111,6 +111,13 @@ endif
 ## Install luan-vim
 luan-vim:
 	if [ -d $(HOME)/.vim ]; then vim-update; else curl vimfiles.luan.sh/install | bash; fi
+
+.PHONY: repos
+## Clone git repos
+repos:
+	ln -f $(ROOT_DIR)/mrconfig $(HOME)/.mrconfig
+	cd $(HOME) && \
+		mr update -q -j 4 --rebase --autostash
 
 .PHONY: allow-internet
 ## Allow executables from the internet
