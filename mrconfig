@@ -117,6 +117,14 @@ update =
 	 git pull --rebase --autostash
 init = git init
 
+[workspace/rabbitmq-for-kubernetes-ci]
+checkout = git clone 'git@github.com:pivotal/rabbitmq-for-kubernetes-ci.git' 'rabbitmq-for-kubernetes-ci'
+init = git init
+
+[workspace/diy-kubernetes-examples]
+checkout = git clone 'git@github.com:rabbitmq/diy-kubernetets-examples.git' 'diy-kubernetes-examples'
+init = git init
+
 # ------------
 # Rabbit core
 # ------------
@@ -129,6 +137,10 @@ init = git init
 [workspace/rabbitmq-perf-test]
 checkout = git clone 'git@github.com:rabbitmq/rabbitmq-perf-test.git' 'rabbitmq-perf-test'
 resethardhead = git reset --hard HEAD
+init = git init
+
+[workspace/rabbitmq-auth-backend-oauth2]
+checkout = git clone 'git@github.com:rabbitmq/rabbitmq-auth-backend-oauth2.git' 'rabbitmq-auth-backend-oauth2'
 init = git init
 
 # ------------------
@@ -145,8 +157,15 @@ init = git init
 
 # https://github.com/PurpleBooth/walks
 [workspace/walks]
-checkout = git clone 'git@github.com:PurpleBoot/walks.git' 'walks'
+checkout = git clone 'git@github.com:PurpleBooth/walks.git' 'walks'
 update =
 	 git checkout main
 	 git pull --rebase --autostash
+init = git init
+
+[workspace/walk-pipeline]
+checkout = git clone 'git@github.com:PurpleBooth/walk-pipeline.git' 'walk-pipeline'
+update =
+	git checkout main
+	git pull --rebase --autostash
 init = git init
