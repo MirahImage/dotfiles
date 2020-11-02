@@ -10,7 +10,7 @@ show-help:
 
 .PHONY: setup
 ## Installs dotfiles
-setup: brew zsh git tmux smith go-tools vscode-extensions cf-plugins luan-vim repos allow-internet
+setup: brew zsh git tmux smith go-tools vscode cf-plugins luan-vim repos allow-internet
 
 
 .PHONY: zsh
@@ -89,9 +89,10 @@ go-tools:
 	go get -u github.com/onsi/ginkgo/ginkgo \
 		github.com/onsi/gomega
 
-.PHONY: vscode-extensions
+.PHONY: vscode
 ## Install vscode extensions
-vscode-extensions:
+vscode:
+	ln -f $(ROOT_DIR)/vscode_settings.json $(HOME)/Library/Application\ Support/Code/User/settings.json
 	code --install-extension minherz.copyright-inserter
 	code --install-extension ms-azuretools.vscode-docker
 	code --install-extension pgourlain.erlang
