@@ -129,6 +129,13 @@ init = git init
 # Rabbit core
 # ------------
 
+[workspace/rabbitmq-server]
+checkout = git clone 'git@github.com:rabbitmq/rabbitmq-server.git' 'rabbitmq-server'
+update =
+	git checkout main
+	git pull --rebase --autostash
+init = git init
+
 [workspace/rabbitmq-public-umbrella]
 checkout = git clone 'git@github.com:rabbitmq/rabbitmq-public-umbrella.git' 'rabbitmq-public-umbrella'
 resethardhead = git reset --hard HEAD
@@ -137,17 +144,6 @@ init = git init
 [workspace/rabbitmq-perf-test]
 checkout = git clone 'git@github.com:rabbitmq/rabbitmq-perf-test.git' 'rabbitmq-perf-test'
 resethardhead = git reset --hard HEAD
-init = git init
-
-[workspace/rabbitmq-auth-backend-oauth2]
-checkout = git clone 'git@github.com:rabbitmq/rabbitmq-auth-backend-oauth2.git' 'rabbitmq-auth-backend-oauth2'
-init = git init
-
-[workspace/rabbitmq-prometheus]
-checkout = git clone 'git@github.com:rabbitmq/rabbitmq-prometheus.git' 'rabbitmq-prometheus'
-update =
-	git checkout main
-	git pull --rebase --autostash
 init = git init
 
 # ------------------
