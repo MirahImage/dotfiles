@@ -136,9 +136,8 @@ update =
 	git pull --rebase --autostash
 init = git init
 
-[workspace/rabbitmq-public-umbrella]
-checkout = git clone 'git@github.com:rabbitmq/rabbitmq-public-umbrella.git' 'rabbitmq-public-umbrella'
-resethardhead = git reset --hard HEAD
+[workspace/RabbitTestTool]
+checkout = git clone 'git@github.com:rabbitmq/RabbitTestTool.git' 'RabbitTestTool'
 init = git init
 
 [workspace/rabbitmq-perf-test]
