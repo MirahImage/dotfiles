@@ -93,5 +93,6 @@
     "terminal.external.osxExec": "iTerm.app",
     "editor.minimap.enabled": false,
     "extensions.ignoreRecommendations": false,
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+    "FSharp.suggestGitignore": false
 }
