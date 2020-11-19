@@ -105,6 +105,7 @@ vscode:
 	code --install-extension sonarsource.sonarlint-vscode
 	code --install-extension redhat.vscode-xml
 	code --install-extension gamunu.vscode-yarn
+	code --install-extension dracula-theme.theme-dracula
 
 .PHONY: cf-plugins
 ## Install cf-cli plugins

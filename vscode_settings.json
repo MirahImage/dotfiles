@@ -94,5 +94,11 @@
     "editor.minimap.enabled": false,
     "extensions.ignoreRecommendations": false,
     "editor.wordWrap": "on",
-    "FSharp.suggestGitignore": false
+    "FSharp.suggestGitignore": false,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 12,
+    "terminal.integrated.fontFamily": "monospace",
+    "terminal.integrated.fontSize": 14,
+    "workbench.colorTheme": "Dracula"
 }
