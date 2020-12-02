@@ -129,6 +129,10 @@ init = git init
 # Rabbit core
 # ------------
 
+[workspace/ra]
+checkout = git clone 'git@github.com:rabbitmq/ra.git' 'ra'
+init = git init
+
 [workspace/rabbitmq-server]
 checkout = git clone 'git@github.com:rabbitmq/rabbitmq-server.git' 'rabbitmq-server'
 update =
