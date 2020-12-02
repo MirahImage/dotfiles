@@ -120,6 +120,7 @@ endif
 .PHONY: luan-vim
 ## Install luan-vim
 luan-vim:
+	ln -f $(ROOT_DIR)/vimrc.local.plugins $(HOME)/.vimrc.local.plugins
 	if [ -d $(HOME)/.vim ]; then vim-update; else curl vimfiles.luan.sh/install | bash; fi
 
 .PHONY: repos
