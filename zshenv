@@ -11,3 +11,5 @@ export PATH=$PATH:/usr/local/kubebuilder/bin
 
 # Mac uses an ancient version of ruby, use homebrew ruby instead
 export PATH=/usr/local/opt/ruby/bin:$PATH
+
+export PATH=$PATH:/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin
