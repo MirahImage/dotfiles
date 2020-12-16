@@ -48,7 +48,7 @@ endif
 keys: brew
 	gpg --import <(lpass show "Personal/GitHub GPG Key" --notes)
 	mkdir -p $(HOME)/.ssh
-	lpass show "Personal/GitHub SSH Key" --notes > $(HOME)/.ssh/ssh-key
+	lpass show "Personal/key" --notes > $(HOME)/.ssh/ssh-key && chmod 0600 $(HOME)/.ssh/ssh-key
 	eval "$(ssh-agent -s )" && ssh-add -D && ssh-add $(HOME)/.ssh/ssh-key
 
 .PHONY: git
