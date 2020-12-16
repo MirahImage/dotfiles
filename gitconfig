@@ -34,7 +34,6 @@
   compactionHeuristic = true
 [commit]
   verbose = true
-  template = ~/.gitmessage
 	gpgsign = true
 [user]
   name = Mirah Gary
