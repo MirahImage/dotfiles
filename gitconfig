@@ -2,10 +2,9 @@
   st = status
   di = diff
   co = checkout
-  ci = "duet-commit -v"
-  rv = "duet-revert"
+  ci = "commit -v"
+  rv = "revert"
   br = branch
-  sta = stash
   llog = "log --date=local"
   flog = "log --pretty=fuller --decorate"
   lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
@@ -17,11 +16,6 @@
   fixup = "commit --fixup"
   squash = "commit --squash"
   unstage = "reset HEAD"
-  rum = "rebase master@{u}"
-  drb = rebase -i --exec 'git duet-commit --amend --reset-author -v'
-  pom = push origin master
-  poh = push origin head
-  prom = pull --rebase origin master
 [core]
   editor = nvim
   excludesfile = ~/.gitignore_global
@@ -44,15 +38,7 @@
 	gpgsign = true
 [user]
   name = Mirah Gary
-  email = mgary@pivotal.io
-[duet "env"]
-	git-author-initials = mg
-	git-author-name = Mirah Gary
-	git-author-email = mgary@pivotal.io
-	mtime = 1588863543
-	git-committer-initials = mg
-	git-committer-name = Mirah Gary
-	git-committer-email = mgary@pivotal.io
+  email = mgary@vmware.com
 [gpg]
   program = /usr/local/bin/gpg
 [credential]
