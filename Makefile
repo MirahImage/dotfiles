@@ -56,7 +56,7 @@ keys: brew
 git:
 	ln -f $(ROOT_DIR)/gitconfig $(HOME)/.gitconfig
 	ln -f $(ROOT_DIR)/gitignore_global $(HOME)/.gitignore_global
-	mkdir -p $(HOME)/.config/git-mit && ln -f $(ROOT_DIR)/mit.toml $(HOME)/.config/git-mit/mit.toml
+	mkdir -p $(HOME)/.config/git-mit && lpass show "git-mit.toml" --notes > $(HOME)/.config/git-mit/mit.toml
 	if [ ! -d $(HOME)/workspace ]; then mkdir -p $(HOME)/workspace; fi
 	if [ ! -d $(HOME)/workspace/git-hooks-core ]; then \
 		git clone git@github.com:pivotal-cf/git-hooks-core.git $(HOME)/workspace/git-hooks-core; fi
