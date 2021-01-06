@@ -83,9 +83,9 @@ init = git init
 checkout = git clone 'git@github.com:pivotal-cf/cf-rabbitmq-pipelines.git' 'cf-rabbitmq-pipelines'
 init = git init
 
-# https://github.com/pivotal-cf/cf-rabbitmq-service-gateway-release
-[workspace/cf-rabbitmq-service-gateway-release]
-checkout = git clone 'git@github.com:pivotal-cf/cf-rabbitmq-service-gateway-release' 'cf-rabbitmq-service-gateway-release'
+# https://github.com/pivotal-cf/cf-service-gateway-release
+[workspace/cf-service-gateway-release]
+checkout = git clone 'git@github.com:pivotal-cf/cf-service-gateway-release' 'cf-service-gateway-release'
 init = git init
 
 [workspace/on-demand-service-broker-release]
