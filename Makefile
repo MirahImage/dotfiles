@@ -108,6 +108,7 @@ vscode:
 	code --install-extension gamunu.vscode-yarn
 	code --install-extension dracula-theme.theme-dracula
 	code --install-extension tamasfe.even-better-toml
+	code --install-extension jebbs.plantuml
 
 .PHONY: cf-plugins
 ## Install cf-cli plugins

@@ -87,6 +87,7 @@ brew 'yarn'
 brew 'yj'
 brew 'ytt'
 brew 'zsh-completions'
+brew 'graphviz'
 
 cask 'adoptopenjdk'
 cask 'caffeine'
