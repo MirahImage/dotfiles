@@ -121,6 +121,13 @@ init = git init
 checkout = git clone 'git@github.com:rabbitmq/tanzu-cluster.operator.git' 'tanzu-cluster-operator'
 init = git init
 
+[workspace/messaging-topology-operator]
+checkout = git clone 'git@github.com:rabbitmq/messaging-topology-operator.git' 'messaging-topology-operator'
+update =
+	git checkout main
+	git pull --rebase --autostash
+init = git init
+
 [workspace/rabbitmq-for-kubernetes-ci]
 checkout = git clone 'git@github.com:pivotal/rabbitmq-for-kubernetes-ci.git' 'rabbitmq-for-kubernetes-ci'
 init = git init
