@@ -47,6 +47,8 @@ endif
 .PHONY: keys
 ## Loads SSH and GPG keys for interacting with GitHub. Interactive
 keys: brew
+	echo "pinentry-program /usr/local/bin/pinentry-mac" > $(HOME)/.gnupg/gpg-agent.conf
+	killall gpg-agent
 	gpg --import <(lpass show "Personal/GitHub GPG Key" --notes)
 	mkdir -p $(HOME)/.ssh
 	lpass show "Personal/key" --notes > $(HOME)/.ssh/ssh-key && chmod 0600 $(HOME)/.ssh/ssh-key
