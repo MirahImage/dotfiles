@@ -42,6 +42,7 @@ endif
 	ln -f $(ROOT_DIR)/Brewfile $(HOME)/.Brewfile
 	brew bundle --global
 	brew cleanup
+	ln -f /usr/local/bin/gmake /usr/local/bin/make
 
 .PHONY: keys
 ## Loads SSH and GPG keys for interacting with GitHub. Interactive

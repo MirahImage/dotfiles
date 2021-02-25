@@ -25,6 +25,7 @@ plugins=(
     git
     golang
     rust
+    ssh-agent
     terraform
     thefuck
     yarn
