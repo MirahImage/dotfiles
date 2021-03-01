@@ -41,6 +41,9 @@ unsetopt correct_all
 HISTSIZE=1000000
 SAVEHIST=1000000
 
+# ssh key
+ssh-add -K ~/.ssh/ssh-key
+
 # fzf
 export FZF_DEFAULT_OPTS="--extended --cycle --reverse --ansi"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
