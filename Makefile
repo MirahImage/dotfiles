@@ -84,7 +84,7 @@ tmux:
 .PHONY: smith
 ## Add smith and token hook
 smith:
-	go get -u github.com/pivotal/smith
+	GOPRIVATE=github.com/pivotal go get -u github.com/pivotal/smith/v2
 	ln -f $(ROOT_DIR)/smith-token-hook.sh $(HOME)/.smith-token-hook.sh
 
 .PHONY: go-tools
