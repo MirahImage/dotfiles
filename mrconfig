@@ -64,7 +64,7 @@ init = git init
 [workspace/p-rabbitmq]
 checkout = git clone 'git@github.com:pivotal-cf/p-rabbitmq.git' 'p-rabbitmq'
 update =
-	 git checkout v1.21
+	 git checkout v2.0
 	 git pull --rebase --autostash
 resethardhead = git reset --hard HEAD
 init = git init
@@ -119,6 +119,9 @@ init = git init
 
 [workspace/tanzu-cluster-operator]
 checkout = git clone 'git@github.com:rabbitmq/tanzu-cluster.operator.git' 'tanzu-cluster-operator'
+update =
+	git checkout main
+	git pull --rebase --autostash
 init = git init
 
 [workspace/messaging-topology-operator]
@@ -130,10 +133,13 @@ init = git init
 
 [workspace/rabbitmq-for-kubernetes-ci]
 checkout = git clone 'git@github.com:pivotal/rabbitmq-for-kubernetes-ci.git' 'rabbitmq-for-kubernetes-ci'
+update =
+	git checkout main
+	git pull --rebase --autostash
 init = git init
 
-[workspace/diy-kubernetes-examples]
-checkout = git clone 'git@github.com:rabbitmq/diy-kubernetets-examples.git' 'diy-kubernetes-examples'
+[workspace/rabbitmq-for-k8s-home]
+checkout = git clone 'git@github.com:pivotal/rabbitmq-for-k8s-home.git' 'rabbitmq-for-k8s-home'
 init = git init
 
 # ------------
@@ -146,9 +152,6 @@ init = git init
 
 [workspace/rabbitmq-server]
 checkout = git clone 'git@github.com:rabbitmq/rabbitmq-server.git' 'rabbitmq-server'
-update =
-	git checkout main
-	git pull --rebase --autostash
 init = git init
 
 [workspace/RabbitTestTool]
@@ -172,16 +175,16 @@ update =
 	 git pull --rebase --autostash
 init = git init
 
-# https://github.com/PurpleBooth/walks
+# https://github.com/Berlin-Weekend-Walking/walks
 [workspace/walks]
-checkout = git clone 'git@github.com:PurpleBooth/walks.git' 'walks'
+checkout = git clone 'git@github.com:Berlin-Weekend-Walking/walks.git' 'walks'
 update =
 	 git checkout main
 	 git pull --rebase --autostash
 init = git init
 
 [workspace/walk-pipeline]
-checkout = git clone 'git@github.com:PurpleBooth/walk-pipeline.git' 'walk-pipeline'
+checkout = git clone 'git@github.com:Berlin-Weekend-Walking/walk-pipeline.git' 'walk-pipeline'
 update =
 	git checkout main
 	git pull --rebase --autostash
