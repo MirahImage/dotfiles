@@ -92,8 +92,11 @@ smith:
 go-tools:
 	go get -u github.com/onsi/ginkgo/ginkgo \
 		github.com/onsi/gomega
-	curl -L "https://github.com/kubernetes-sigs/kubebuilder/releases/download/$(shell curl --silent "https://api.github.com/repos/kubernetes-sigs/kubebuilder/releases/latest" | jq -r .tag_name)/kubebuilder_$(shell curl --silent "https://api.github.com/repos/kubernetes-sigs/kubebuilder/releases/latest" | jq -r .tag_name | sed 's/v//')_$(shell go env GOOS)_$(shell go env GOARCH).tar.gz" | tar -xz -C /tmp/ && \
-		sudo mv "/tmp/kubebuilder_$(shell curl --silent "https://api.github.com/repos/kubernetes-sigs/kubebuilder/releases/latest" | jq -r .tag_name | sed 's/v//')_$(shell go env GOOS)_$(shell go env GOARCH)" /usr/local/kubebuilder
+	$(eval KUBEBUILDER_VERSION := $(shell curl --silent "https://api.github.com/repos/kubernetes-sigs/kubebuilder/releases/latest" | jq -r .tag_name | sed 's/v//'))
+	$(eval OS := $(shell go env GOOS))
+	$(eval ARCH := $(shell go env GOARCH))
+	curl -L "https://github.com/kubernetes-sigs/kubebuilder/releases/download/v$(KUBEBUILDER_VERSION)/kubebuilder_$(KUBEBUILDER_VERSION)_$(OS)_$(ARCH).tar.gz" | tar -xz -C /tmp/ && \
+		sudo mv "/tmp/kubebuilder_$(KUBEBUILDER_VERSION)_$(OS)_$(ARCH)" /usr/local/kubebuilder
 
 .PHONY: vscode
 ## Install vscode extensions
