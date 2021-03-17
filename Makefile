@@ -91,7 +91,8 @@ smith:
 ## Install golang tools
 go-tools:
 	go get -u github.com/onsi/ginkgo/ginkgo \
-		github.com/onsi/gomega
+		github.com/onsi/gomega \
+		github.com/elastic/crd-ref-docs
 	$(eval KUBEBUILDER_VERSION := $(shell curl --silent "https://api.github.com/repos/kubernetes-sigs/kubebuilder/releases/latest" | jq -r .tag_name | sed 's/v//'))
 	$(eval OS := $(shell go env GOOS))
 	$(eval ARCH := $(shell go env GOARCH))
