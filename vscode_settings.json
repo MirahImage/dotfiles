@@ -100,5 +100,6 @@
     "editor.fontSize": 12,
     "terminal.integrated.fontFamily": "monospace",
     "terminal.integrated.fontSize": 14,
-    "workbench.colorTheme": "Dracula"
+    "workbench.colorTheme": "Dracula",
+    "go.toolsManagement.autoUpdate": true
 }
