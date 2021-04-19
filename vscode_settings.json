@@ -101,5 +101,7 @@
     "terminal.integrated.fontFamily": "monospace",
     "terminal.integrated.fontSize": 14,
     "workbench.colorTheme": "Dracula",
-    "go.toolsManagement.autoUpdate": true
+    "go.toolsManagement.autoUpdate": true,
+    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
+    "latex-workshop.latex.autoBuild.run": "never"
 }
