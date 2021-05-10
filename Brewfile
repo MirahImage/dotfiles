@@ -94,6 +94,7 @@ brew 'zsh-completions'
 brew 'graphviz'
 
 cask 'adoptopenjdk'
+cask 'amethyst'
 cask 'caffeine'
 cask 'font-fira-code'
 cask 'font-inconsolata'
