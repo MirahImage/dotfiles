@@ -103,5 +103,6 @@
     "workbench.colorTheme": "Dracula",
     "go.toolsManagement.autoUpdate": true,
     "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
-    "latex-workshop.latex.autoBuild.run": "never"
+    "latex-workshop.latex.autoBuild.run": "never",
+    "docker.showStartPage": false
 }
