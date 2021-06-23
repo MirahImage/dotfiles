@@ -59,6 +59,7 @@ keys: brew
 git:
 	ln -f $(ROOT_DIR)/gitconfig $(HOME)/.gitconfig
 	ln -f $(ROOT_DIR)/gitignore_global $(HOME)/.gitignore_global
+	ln -f $(ROOT_DIR)/tigrc $(HOME)/.tigrc
 	mkdir -p $(HOME)/.config/git-mit && lpass show "git-mit.toml" --notes > $(HOME)/.config/git-mit/mit.toml
 	if [ ! -d $(HOME)/workspace ]; then mkdir -p $(HOME)/workspace; fi
 	if [ ! -d $(HOME)/workspace/git-hooks-core ]; then \
