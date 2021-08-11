@@ -147,3 +147,11 @@ repos:
 ## Allow executables from the internet
 allow-internet:
 	sudo spctl --master-disable
+
+.PHONY: ruby
+## Install ruby and dependencies
+ruby: brew
+	ruby-install ruby-2.7.2
+	gem update --system
+	gem install bundler
+	bundle config --global jobs $(($(sysctl -n hw.ncpu) -1))
