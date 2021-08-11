@@ -90,4 +90,8 @@ export ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=133'
 export ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=198'
 
 export PATH=/usr/local/opt/ruby/bin:$PATH
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+chruby ruby-2.7.2
+
 export PATH="/usr/local/opt/influxdb@1/bin:$PATH"
