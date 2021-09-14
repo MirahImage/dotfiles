@@ -160,3 +160,4 @@ ruby: brew
 ## Set up lima and nerdctl
 nerdctl: brew
 	sudo ln -f $(ROOT_DIR)/com.lima.daemon.plist /Library/LaunchAgents/com.lima.daemon.plist
+	launchctl load /Library/LaunchAgents/com.lima.daemon.plist
