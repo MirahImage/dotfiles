@@ -21,3 +21,6 @@ source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 chruby ruby-2.7.2
 . "$HOME/.cargo/env"
+
+# use lima+nerdctl instead of docker
+alias docker="lima nerdctl"

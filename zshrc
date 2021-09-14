@@ -75,9 +75,6 @@ alias gpr="git pull --rebase"
 export GIT_DUET_GLOBAL=true
 export GIT_DUET_ROTATE_AUTHOR=1
 
-# use lima+nerdctl instead of docker
-alias docker="lima nerdctl"
-
 export LPASS_AGENT_TIMEOUT=28800
 
 # Add zsh completion
