@@ -23,4 +23,4 @@ chruby ruby-2.7.2
 . "$HOME/.cargo/env"
 
 # use lima+nerdctl instead of docker
-alias docker="lima nerdctl"
+# alias docker="lima nerdctl"

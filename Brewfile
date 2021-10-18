@@ -91,6 +91,7 @@ brew 'tig'
 brew 'tmux'
 brew 'tree'
 brew 'universal-ctags', args: ["HEAD"]
+brew 'vmware-fusion'
 brew 'watch'
 brew 'wget'
 brew 'yarn'
