@@ -16,7 +16,6 @@ plugins=(
     aws
     brew
     bundler
-    cargo
     colored-man-pages
     colorize
     direnv
