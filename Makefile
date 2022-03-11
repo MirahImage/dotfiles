@@ -10,7 +10,7 @@ show-help:
 
 .PHONY: setup
 ## Installs dotfiles
-setup: brew zsh git tmux smith go-tools vscode cf-plugins luan-vim repos allow-internet
+setup: brew zsh git tmux smith go-tools vscode cf-plugins luan-vim repos allow-internet kiex
 
 
 .PHONY: zsh
@@ -161,3 +161,8 @@ ruby: brew
 nerdctl: brew
 	sudo ln -f $(ROOT_DIR)/com.lima.daemon.plist /Library/LaunchAgents/com.lima.daemon.plist
 	launchctl load /Library/LaunchAgents/com.lima.daemon.plist
+
+.PHONY: kiex
+## Install kiex for elixir
+kiex:
+	curl -sSL https://raw.githubusercontent.com/taylor/kiex/master/install | bash -s

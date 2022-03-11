@@ -87,3 +87,6 @@ export ZSH_HIGHLIGHT_STYLES[bracket-level-3]='fg=043,bold'
 export ZSH_HIGHLIGHT_STYLES[cursor]='bg=049'
 export ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=133'
 export ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=198'
+
+# Install kiex for Elixir
+test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
