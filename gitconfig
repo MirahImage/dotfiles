@@ -38,8 +38,9 @@
 [user]
   name = Mirah Gary
   email = mgary@vmware.com
+  signingkey = 66F2F7AD
 [gpg]
-  program = /usr/local/bin/gpg
+  program = /opt/homebrew/bin/gpg
 [credential]
   helper = osxkeychain
 [pull]

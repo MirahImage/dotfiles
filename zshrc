@@ -31,6 +31,9 @@ plugins=(
     zsh-syntax-highlighting
 )
 
+# ssh key
+ssh-add --apple-use-keychain ~/.ssh/ssh-key
+
 source $ZSH/oh-my-zsh.sh
 
 export LANG=en_US.UTF-8
@@ -40,12 +43,13 @@ unsetopt correct_all
 HISTSIZE=1000000
 SAVEHIST=1000000
 
-# ssh key
-ssh-add -K ~/.ssh/ssh-key
-
 # fzf
 export FZF_DEFAULT_OPTS="--extended --cycle --reverse --ansi"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# gpg
+export GPG_TTY=$(tty)
+gpgconf --launch gpg-agent
 
 # direnv
 eval "$(direnv hook zsh)"
@@ -64,7 +68,7 @@ alias pip="pip3"
 alias k="kubectl"
 
 # Use gnumake
-alias make="/usr/local/bin/make"
+alias make="gmake"
 
 # git short commands
 alias gp="git push"
