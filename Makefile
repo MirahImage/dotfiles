@@ -166,3 +166,8 @@ nerdctl: brew
 ## Install kiex for elixir
 kiex:
 	curl -sSL https://raw.githubusercontent.com/taylor/kiex/master/install | bash -s
+
+.PHONY: bazel
+## Configure bazel user profile for rabbitmq-server
+bazel: repos
+	lpass show "Personal/bazelrc" > $(HOME)/workspace/rabbitmq-server/user.bazelrc
