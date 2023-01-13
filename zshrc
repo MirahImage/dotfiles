@@ -80,6 +80,9 @@ export GIT_DUET_ROTATE_AUTHOR=1
 
 export LPASS_AGENT_TIMEOUT=28800
 
+# pivnet alias
+alias pivnet="pivnet-cli"
+
 # Add zsh completion
 fpath+=("$(brew --prefix)/share/zsh-completions")
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
