@@ -62,6 +62,7 @@ alias vi="nvim"
 
 alias ll="ls -al"
 alias cat="ccat"
+alias lsd="ls | lolcat -F 1"
 
 alias pip="pip3"
 

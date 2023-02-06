@@ -105,5 +105,8 @@
     "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
     "latex-workshop.latex.autoBuild.run": "never",
     "docker.showStartPage": false,
-    "redhat.telemetry.enabled": false
+    "redhat.telemetry.enabled": false,
+    "[python]": {
+        "editor.formatOnType": true
+    }
 }
