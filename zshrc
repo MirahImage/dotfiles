@@ -98,3 +98,4 @@ export ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=198'
 
 # Install kiex for Elixir
 test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"

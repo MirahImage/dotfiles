@@ -12,12 +12,8 @@ export PATH=$PATH:/usr/local/kubebuilder/bin
 export PATH=$PATH:$HOME/.krew/bin
 
 # Mac uses an ancient version of ruby, use homebrew ruby instead
-export PATH=/usr/local/opt/ruby/bin:$PATH
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
 export PATH=$PATH:/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin
 
-export PATH=/usr/local/opt/ruby/bin:$PATH
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
-chruby ruby-2.7.2
 . "$HOME/.cargo/env"
