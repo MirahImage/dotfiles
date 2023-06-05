@@ -31,9 +31,6 @@ plugins=(
     zsh-syntax-highlighting
 )
 
-# ssh key
-ssh-add --apple-use-keychain ~/.ssh/ssh-key
-
 source $ZSH/oh-my-zsh.sh
 
 export LANG=en_US.UTF-8
@@ -98,4 +95,8 @@ export ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=198'
 
 # Install kiex for Elixir
 test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export PATH="/opt/homebrew/opt/ruby@3.1/bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk@20/bin:$PATH"
+
+# ssh key
+ssh-add --apple-use-keychain ~/.ssh/ssh-key

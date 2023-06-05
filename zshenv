@@ -12,7 +12,7 @@ export PATH=$PATH:/usr/local/kubebuilder/bin
 export PATH=$PATH:$HOME/.krew/bin
 
 # Mac uses an ancient version of ruby, use homebrew ruby instead
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export PATH="/opt/homebrew/opt/ruby@3.1/bin:$PATH"
 
 export PATH=$PATH:/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin
 
