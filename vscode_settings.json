@@ -108,5 +108,6 @@
     "redhat.telemetry.enabled": false,
     "[python]": {
         "editor.formatOnType": true
-    }
+    },
+    "git.openRepositoryInParentFolders": "always"
 }
