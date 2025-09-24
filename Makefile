@@ -103,7 +103,7 @@ go-tools:
 .PHONY: vscode
 ## Install vscode extensions
 vscode:
-	ln -f $(ROOT_DIR)/vscode_settings.json $(HOME)/Library/Application\ Support/Code/User/settings.json
+	ln -f $(ROOT_DIR)/vscode_settings.json $(HOME)/Library/Application\ Support/VSCodium/User/settings.json
 	code --install-extension minherz.copyright-inserter
 	code --install-extension ms-azuretools.vscode-docker
 	code --install-extension pgourlain.erlang

@@ -86,7 +86,7 @@
         "**/.settings": true,
         "**/.factorypath": true
     },
-    "copyrightInserter.holder": "VMware, Inc.",
+    "copyrightInserter.holder": "Broadcom, Inc.",
     "java.project.importHint": false,
     "go.useGoProxyToCheckForToolUpdates": false,
     "terminal.integrated.shell.osx": "/bin/zsh",
