@@ -76,10 +76,8 @@ alias gpr="git pull --rebase"
 export GIT_DUET_GLOBAL=true
 export GIT_DUET_ROTATE_AUTHOR=1
 
-export LPASS_AGENT_TIMEOUT=28800
-
-# pivnet alias
-alias pivnet="pivnet-cli"
+# make vscodium work like code
+alias code="codium"
 
 # Add zsh completion
 fpath+=("$(brew --prefix)/share/zsh-completions")
