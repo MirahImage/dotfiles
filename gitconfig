@@ -37,8 +37,8 @@
 	gpgsign = true
 [user]
   name = Mirah Gary
-  email = mgary@vmware.com
-  signingkey = 66F2F7AD
+  email = mirah.gary@broadcom.com
+  signingkey = D2A9541CC9C1A90B
 [gpg]
   program = /opt/homebrew/bin/gpg
 [credential]

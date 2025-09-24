@@ -95,8 +95,15 @@ export ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=198'
 
 # Install kiex for Elixir
 test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
-export PATH="/opt/homebrew/opt/ruby@3.1/bin:$PATH"
-export PATH="/opt/homebrew/opt/openjdk@20/bin:$PATH"
+export PATH="/opt/homebrew/opt/ruby@3.2/bin:$PATH"
+export PATH="/opt/homebrew/Cellar/openjdk@20/bin:$PATH"
+
 
 # ssh key
 ssh-add --apple-use-keychain ~/.ssh/ssh-key
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/mgary/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/mgary/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/mgary/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/mgary/google-cloud-sdk/completion.zsh.inc'; fi

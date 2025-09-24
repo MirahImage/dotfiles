@@ -49,7 +49,7 @@ endif
 keys:
 	echo "pinentry-program $(shell which pinentry-mac)" > $(HOME)/.gnupg/gpg-agent.conf
 	killall gpg-agent
-	gpg --import <(lpass show "Personal/GitHub GPG Key vmware" --notes)
+	gpg --import <(lpass show "Personal/Broadcom-GPG-key" --notes)
 	mkdir -p $(HOME)/.ssh
 	lpass show "Personal/key" --notes > $(HOME)/.ssh/ssh-key && chmod 0600 $(HOME)/.ssh/ssh-key
 	eval "$(ssh-agent -s )" && ssh-add -D && ssh-add $(HOME)/.ssh/ssh-key
