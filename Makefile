@@ -104,21 +104,17 @@ go-tools:
 ## Install vscode extensions
 vscode:
 	ln -f $(ROOT_DIR)/vscode_settings.json $(HOME)/Library/Application\ Support/VSCodium/User/settings.json
-	code --install-extension minherz.copyright-inserter
-	code --install-extension ms-azuretools.vscode-docker
-	code --install-extension pgourlain.erlang
-	code --install-extension golang.go
-	code --install-extension hashicorp.terraform
-	code --install-extension johnpapa.vscode-peacock
-	code --install-extension rebornix.ruby
-	code --install-extension castwide.solargraph
-	code --install-extension timonwong.shellcheck
-	code --install-extension sonarsource.sonarlint-vscode
-	code --install-extension redhat.vscode-xml
-	code --install-extension gamunu.vscode-yarn
-	code --install-extension dracula-theme.theme-dracula
-	code --install-extension tamasfe.even-better-toml
-	code --install-extension jebbs.plantuml
+	codium --install-extension dracula-theme.theme-dracula
+	codium --install-extension erlang-ls.erlang-ls
+	codium --install-extension golang.go
+	codium --install-extension johnpapa.vscode-peacock
+	codium --install-extension opentofu.vscode-opentofu
+	codium --install-extension rebornix.ruby
+	codium --install-extension timonwong.shellcheck
+	codium --install-extension redhat.vscode-xml
+	codium --install-extension gamunu.vscode-yarn
+	codium --install-extension tamasfe.even-better-toml
+	codium --install-extension jebbs.plantuml
 
 .PHONY: cf-plugins
 ## Install cf-cli plugins
