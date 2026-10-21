@@ -1,4 +1,4 @@
-export ZSH="/Users/mgary/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="custom-refined"
 
@@ -51,11 +51,6 @@ gpgconf --launch gpg-agent
 # direnv
 eval "$(direnv hook zsh)"
 alias da="direnv allow"
-
-# Always use nvim
-export EDITOR=nvim
-alias vim="nvim"
-alias vi="nvim"
 
 alias ll="ls -al"
 alias cat="ccat"
