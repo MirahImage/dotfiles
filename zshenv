@@ -12,5 +12,3 @@ export PATH=$PATH:/usr/local/kubebuilder/bin
 export PATH=$PATH:$HOME/.krew/bin
 
 export PATH=$PATH:/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin
-
-. "$HOME/.cargo/env"

@@ -74,6 +74,8 @@ export GIT_DUET_ROTATE_AUTHOR=1
 # make vscodium work like code
 alias code="codium"
 
+alias bosh="bosh-cli"
+
 # Add zsh completion
 fpath+=("$(brew --prefix)/share/zsh-completions")
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
@@ -100,3 +102,7 @@ if [ -f '/Users/mgary/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/mgary/goo
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/mgary/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/mgary/google-cloud-sdk/completion.zsh.inc'; fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
