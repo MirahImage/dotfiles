@@ -52,9 +52,11 @@ gpgconf --launch gpg-agent
 eval "$(direnv hook zsh)"
 alias da="direnv allow"
 
-alias ll="ls -al"
-alias cat="ccat"
-alias lsd="ls | lolcat -F 1"
+if [[ -o interactive && -t 1 ]]; then
+    alias ll="ls -al"
+    alias cat="ccat"
+    alias lsd="ls | lolcat -F 1"
+fi
 
 alias pip="pip3"
 

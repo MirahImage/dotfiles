@@ -17,3 +17,7 @@ TAGS
 !TAGS/
 tags
 !tags/
+
+# local secrets
+.envrc
+
